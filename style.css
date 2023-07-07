@@ -1,0 +1,96 @@
+/* create a toggle button to switch between different yoshi colors fot background */
+
+html{
+  font-family: 'Mitr', sans-serif;
+  font-size: .9rem;
+}
+
+body{
+  background-attachment: fixed;
+}
+
+#bg {
+  z-index: -1;
+  opacity: 53%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  transform: scale(1.0); 
+  &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("yoshi-eggs.jpeg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+  }
+}
+
+.wrapper { 
+  text-align: center;
+  background-color: rgb(132, 219, 121);
+  border: solid 2px black;
+  padding: 2%;
+  border-radius: 25px;
+  box-shadow: 0px 0px 30px 5px rgb(27, 27, 27);
+  width: 80%; /* specify a width! */
+  margin: 0 auto; /* center */ }
+
+/* Media query for mobile devices */
+@media screen and (max-width: 767px) {
+  #logo{
+    width: 13em;
+    height: auto;
+  }
+
+  #yoshi {
+    width: 12em;
+    height: auto;
+  }
+  #yoshi-fruit{
+    width: 13em;
+    height: auto;
+  }
+  #clan{
+    width: 13.5em;
+    height: auto;
+    }
+
+    #question-cloud{
+      width: 9em;
+      height: auto;
+    }
+}
+
+/* Media query for tablets and desktops */
+@media screen and (min-width: 768px) {
+  #logo{
+    width: 30em;
+    height: auto
+  }
+
+  #yoshi {
+    width: 25em;
+    height: auto;
+  }
+  #yoshi-fruit{
+    width: 25em;
+    height: auto;
+  }
+  #clan{
+    width: 30em;
+    height: auto;
+    }
+    #question-cloud{
+      width: 15em;
+      height: auto;
+    }
+}
